@@ -71,6 +71,17 @@ const Index = () => {
               Meu objetivo é desenvolver aplicações web que não apenas funcionem bem, mas que também
               proporcionem uma experiência incrível para os usuários. Sempre buscando aprender novas
               tecnologias e aprimorar minhas habilidades.
+              <p>
+                <br />
+                Sou formado em Análise e Desenvolvimento de Sistemas e tenho experiência em projetos
+                pessoais e acadêmicos. Estou sempre aberto a novos desafios e oportunidades de crescimento.
+              </p>
+              <br />
+              <p>
+                Quando não estou codificando, gosto de ler sobre novas tecnologias, praticar esportes e
+                conversar com amigos. Acredito que a colaboração e o aprendizado contínuo são fundamentais
+                para o sucesso na área de tecnologia.
+              </p>
             </p>
           </div>
         </div>
@@ -89,7 +100,7 @@ const Index = () => {
               { name: "Tailwind CSS", level: 70 },
               { name: "Responsive Design", level: 90 },
               { name: "Git", level: 80 },
-              { name: "UI/UX", level: 65 },
+              { name: "UI/UX", level: 65 }
             ].map((skill) => (
               <Card key={skill.name} className="overflow-hidden">
                 <CardHeader className="p-4 pb-2">
@@ -114,35 +125,38 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Meus Projetos</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            {/*TAGS DOS PROJETOS */}
-            {[
-              {
-                title: "Portfólio Pessoal",
-                description: "Este site de portfólio construído com React e Tailwind CSS.",
-                tags: ["React", "Tailwind", "Vite"],
-                githubLink: "https://github.com/Raphazoc/projetoPortifolio",
-                liveLink: "#"
-              },
-              {
-                title: "E-commerce Responsivo",
-                description: "Uma plataforma de e-commerce com design responsivo e funcionalidades de carrinho.",
-                tags: ["React", "Redux", "API", "CSS"],
-                githubLink: "#",
-                liveLink: "#"
-              },
-              {
-                title: "Dashboard Admin",
-                description: "Painel administrativo para visualização e análise de dados.",
-                tags: ["React", "Charts.js", "Material UI"],
-                githubLink: "#",
-                liveLink: "#"
-              },
-            ].map((project, index) => (
+            {[{
+              title: "Portfólio Pessoal",
+              description: "Este site de portfólio construído com React, TypeScript, Vite, Tailwind CSS e Shandcn-ui. É o meu primeiro projeto com Tailwind CSS e Frameworks do React.",
+              tags: ["React", "Tailwind", "Vite", "TypeScript", "Shadcn-ui"],
+              githubLink: "https://github.com/Raphazoc/sitePortifolio",
+              liveLink: "#"
+            }, {
+              title: "CAPSI Digital",
+              description: "Um projeto em parceria com o CAPS Infantojuvenil da cidade de Foz do Iguacu. O projeto tem como objetivo facilitar o agendamento de consultas e a comunicação entre os usuários e a equipe do CAPS.",
+              tags: ["React", "TailwindCSS", "SQL Lite", "CSS", "Typescript"],
+              githubLink: "https://github.com/Raphazoc/capsiDigital",
+              liveLink: "#"
+            }, {
+              title: "Projetos Futuros",
+              description: "Projetos Futuros",
+              tags: ["React"],
+              githubLink: "#",
+              liveLink: "#"
+            }].map((project, index) => (
+              /* Card */ 
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <Code size={48} className="text-gray-400 dark:text-gray-500" />
-                </div>
+                <img
+                  src={
+                    index === 0
+                      ? "/images/portifolio.png"
+                      : index === 1
+                      ? "/images/portifolio2.png"
+                      : "/images/portifolio3.png"
+                  }
+                  alt={`Imagem do projeto ${project.title}`}
+                  className="h-48 w-full object-cover"
+                />
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
                   <CardDescription>
@@ -185,7 +199,7 @@ const Index = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-gray-500" />
-                    <a href="mailto:contato@example.com" className="hover:underline">martinsraphael000@gmail.com</a>
+                    <a href="martinsraphael000@gmail.com" className="hover:underline">martinsraphael000@gmail.com</a>
                   </div>
                   <div className="flex items-center gap-3">
                     <Linkedin className="h-5 w-5 text-gray-500" />
@@ -213,7 +227,7 @@ const Index = () => {
             <a href="https://linkedin.com/in/raphazoc" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:contato@example.com" className="text-gray-400 hover:text-white">
+            <a href="martinsraphael000@gmail.com" className="text-gray-400 hover:text-white">
               <Mail size={20} />
             </a>
           </div>
